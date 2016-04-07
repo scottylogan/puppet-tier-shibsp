@@ -1,0 +1,27 @@
+{
+  "name":                     "tier-shibsp",
+  "description":              "Simple TIER Shibboleth SP configuration",
+  "version":                  "0.1.0",
+  "author":                   "Scotty Logan",
+  "summary":                  "Configures TIER Shibboleth SPs",
+  "license":                  "MIT",
+  "source":                   "https://github.com/scottylogan/puppet-tier-shibsp.git",
+  "project_page":             "https://github.com/scottylogan/puppet-tier-shibsp",
+  "issues_url":               "https://github.com/scottylogan/puppet-tier-shibsp/issues",
+  "data_provider":            "hiera",
+  "operatingsystem_support":  [
+    {
+      "operatingsystem":           "CentOS",
+      "operatingsystemmajrelease": [
+        "7"
+      ]
+    }
+  ],
+  "dependencies":             [
+    {
+      "name":                 "puppetlabs-apache",
+      "version_requirement":  ">=1.8.0"
+    }
+  ]
+}
+
