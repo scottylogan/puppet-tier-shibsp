@@ -9,7 +9,7 @@ class shibsp (
   $contact,
 ){
 
-  $os_class = inline_template("shibsp::<%= @osfamily.downcase %>")
+  $os_class = inline_template('shibsp::<%= @osfamily.downcase %>')
   include $os_class
 
   file { '/etc/shibboleth/shibboleth2.xml':
@@ -25,9 +25,9 @@ class shibsp (
     owner   => 0,
     group   => 0,
     mode    => '0644',
-    source  => "puppet:///modules/${module_name}/attribute-map.xml"),
+    source  => "puppet:///modules/${module_name}/attribute-map.xml",
   }
-  
+
   exec { 'cleanup':
     cwd     => '/etc/shibboleth',
     command => '/bin/rm -f example-* *.dist'
